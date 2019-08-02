@@ -1,0 +1,39 @@
+<div class="container">
+   {{# if errors}}
+<section class="errors">
+<ul>
+    {{# each errors }}
+<li>
+    <div class="alert alert-danger" role="alert">
+         {{ this.msg }}
+    </div>
+</li>
+    {{/each }}
+</ul>
+</section>
+{{/if}}
+<div class="container">
+Add Education
+<form method='POST' action='/education/submit'>
+ <div class="form-group" > 
+    <label>Degree</label>
+    <input type="text" class="form-control"  placeholder="Degree" name="degree">
+  </div>
+  <div class="form-group">
+      <label> Institution
+          </label>
+          <input type="text" class="form-control" placeholder="Institution name" name="institution">
+  </div>
+<div class="form-group">
+    <label>start Date</label>
+    <input type="date" class="form-control"  placeholder="start date" name="start">
+</div>
+<div class="form-group">
+    <label>End Date</label>
+    <input type="date" class="form-control"  placeholder="end date" name="end">
+</div>
+<button class="btn btn-primary">
+register
+</button>
+</form>
+</div>

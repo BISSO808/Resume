@@ -1,0 +1,32 @@
+{{# if errors}}
+<section class="errors">
+<ul>
+    {{# each errors }}
+<li>
+    <div class="alert alert-danger" role="alert">
+         {{ this.msg }}
+    </div>
+</li>
+    {{/each }}
+</ul>
+</section>
+{{/if}}
+<div class="container">
+   Sign in
+<form method='POST' action='/submit'>
+<div class="form-group">
+    <label>Username</label>
+    <input type="text" class="form-control"  placeholder="username" name="username">
+  </div>
+<div class="form-group">
+    <label>password</label>
+    <input type="password" class="form-control"  placeholder="password" name="password">
+</div>
+<div class="form-group">
+    <label>Repeat-password</label>
+    <input type="password" class="form-control"  placeholder="password" name="repeatPassword">
+</div>
+<button class="btn btn-primary">
+register
+</button>
+</form>

@@ -1,0 +1,22 @@
+<body>
+  <div class="container">
+  {{#each experience}}
+  <div class="alert alert-primary"> 
+   <div class="row">
+     <div class="col-sm-10">{{this.title}}
+        {{this.start}}
+        {{this.end}}
+        {{this.description}}
+   
+        </div>
+        <div class="col-sm-2">
+          <a class="btn btn-danger" align="right" href="experience/delete/{{this.id}}">
+          delete
+          </a>
+          <a class="btn btn-info" align="left" href="/experience/edit/{{this.id}}"> edit</a>
+        </div>
+      </div>
+      </div>
+    {{/each}}
+  </div>
+</body>
