@@ -32,7 +32,7 @@ else{
 Education.addEducation(newEducation, (err,education)=>{
     if(err) throw err;
     req.flash('success_msg','Education added');
-    res.redirect('/education/add');
+    // res.redirect('/education/add');
 });
 }
 });
